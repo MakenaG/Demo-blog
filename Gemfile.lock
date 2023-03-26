@@ -265,7 +265,7 @@ DEPENDENCIES
   capybara
   debug
   guard (~> 2.18)
-  guard-livereload (~> 2.5, >= 2.5.2)
+  guard-livereload (~> 2.5)
   importmap-rails
   jbuilder
   puma (~> 5.0)
