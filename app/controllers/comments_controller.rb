@@ -5,6 +5,11 @@ class CommentsController < ApplicationController
         @comment = @post.comments.create(params[:comment].permit(:name, :comment))
 		redirect_to post_path(@post)
 	end
+
+    def show
+        @comment = Comment.find(params[:id])
+        render plain: @comment.body
+      end
  
 	def destroy
         @post = Post.find(params[:post_id])
@@ -12,4 +17,7 @@ class CommentsController < ApplicationController
         @comment.destroy
 		redirect_to post_path(@post)
 	end
+
+    
+  
 end
