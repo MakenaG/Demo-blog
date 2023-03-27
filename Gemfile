@@ -67,6 +67,7 @@ group :development do
   gem "web-console"
   #make errors better looking
 gem 'better_errors', '~> 2.9', '>= 2.9.1'
+gem "binding_of_caller"
   #Guard is a command line tool to easily handle events on file system modifications.
   gem 'guard', '~> 2.18'
   # Guard::LiveReload automatically reloads your browser when 'view' files are modified.
