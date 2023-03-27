@@ -1,0 +1,10 @@
+<h1>Comment</h1>
+
+<p><strong>Name:</strong> <%= @comment.name %></p>
+
+<p><strong>Comment:</strong></p>
+<%= simple_format @comment.comment %>
+
+<%= link_to 'Edit', edit_post_comment_path(post_id: @post.id, id: @comment.id) %> |
+
+<%= link_to 'Back', post_path(@post) %>

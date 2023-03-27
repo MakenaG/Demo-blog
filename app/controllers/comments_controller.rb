@@ -7,9 +7,17 @@ class CommentsController < ApplicationController
 	end
 
     def show
-        @comment = Comment.find(params[:id])
-        render plain: @comment.body
+        @post = Post.find(params[:post_id])
+        @comment = @post.comments.find(params[:id])
       end
+      
+
+      def edit
+        @post = Post.find(params[:post_id])
+        @comment = Comment.find(params[:id])
+      end
+      
+      
  
 	def destroy
         @post = Post.find(params[:post_id])
